@@ -1,0 +1,63 @@
+@import '../../styles/mixins';
+
+.UserList {
+  @include onTablet {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 29px;
+  }
+
+  &__card {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__details {
+    list-style: none;
+    width: 100%;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__point {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 26px;
+  }
+
+  &__button {
+    display: block;
+    margin: 30px auto 0;
+    width: 120px;
+    background-color: #F4E041;
+  }
+
+  &__UnvisibleButton {
+    display: none;
+  }
+}

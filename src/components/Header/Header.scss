@@ -1,0 +1,68 @@
+@import "../../styles/mixins";
+
+.Header {
+  height: 100vh;
+  
+  &__top {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    @include onTablet {
+      padding: 0 32px;
+    }
+
+    @include onDesktop {
+      padding: 0 60px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    width: 100px;
+    background-color: #F4E041;
+  }
+
+  &__content {
+    height: calc(100vh - 60px);
+    background-image: url(../../images/header-bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onTablet {
+      width: 380px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  &__describe {
+    text-align: center;
+    color: #fff;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+}

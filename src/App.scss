@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Nunito', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+}
+
+html {
+  background-color: #E5E5E5;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
