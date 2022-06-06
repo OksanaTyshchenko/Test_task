@@ -251,7 +251,7 @@ export const Form: React.FC<{ updateUsers: () => void }> = ({
             accept=".jpg, .jpeg"
             onChange={fileChangedHandler}
           />
-          {file ? file.name : "Upload your photo*"}
+          <span className="Form__loadContent">{file ? file.name : "Upload your photo*"}</span>
         </label>
         {fileError && <p className="Form__errorMessage">{fileError}</p>}
         <p className="Form__requiredMessage">* field are required</p>
