@@ -1,6 +1,6 @@
 {
   "name": "my-test-task",
-  "homepage": "https://github.com/OksanaTyshchenko/Test_task",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

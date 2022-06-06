@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getUsersAPI } from "../api";
 import { User } from "../types";
 import { UserList } from "../UserList/UserList";
@@ -11,7 +11,7 @@ export const Main = React.memo(() => {
   const [error, setError] = useState<string>("");
   const [page, setPage] = useState<number>(1);
 
-  const getUsers = async (currentPage = page) => {
+  const getUsers = useCallback(async (currentPage = page) => {
     const result = await getUsersAPI(currentPage);
 
     if (result.success) {
@@ -19,7 +19,7 @@ export const Main = React.memo(() => {
     } else {
       setError(result.message);
     }
-  };
+  }, [page]);
 
   const updateUsers = () => {
     setPage(1);
@@ -28,7 +28,7 @@ export const Main = React.memo(() => {
 
   useEffect(() => {
     getUsers();
-  }, [page]);
+  }, [page, getUsers]);
 
   const handleChangePage = () => {
     setPage((page) => page + 1);
