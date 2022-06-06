@@ -19,6 +19,7 @@
   }
 
   &__input {
+    width: 328px;
     box-sizing: border-box;
     height: 54px;
     border: 1px solid #d0cfcf;
@@ -83,11 +84,15 @@
     margin-top: 47px;
     border: 1px solid #d0cfcf;
     background-color: #fff;
-    width: 380px;
+    width: 328px;
     height: 54px;
     color: #7e7e7e;
     padding-left: 96px;
     align-items: center;
+
+    @include onTablet {
+      width: 380px;
+    }
   }
 
   &__loadInput {
